@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 棋盘容器 */
+.chessContainer {
+  border: 1px solid lightgrey;
+  width: 500px;
+  height: 500px;
+  background: rgb(247, 230, 183);
+  margin: 50px auto;
+
+  /* 弹性盒子，使容器中的内容水平垂直剧中和 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 棋盘 */
+.chessBoard {
+  width: 92%;
+  height: 92%;
+  /* 设置表格的行间没有空隙 */
+  border-collapse: collapse;
+}
+
+/* 棋盘中的每个td */
+.chessBoard td {
+  border: 1px solid black;
+  position: relative;
+}
+/* 棋子 */
+.chess {
+  width: 90%;
+  height: 90%;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  color: lightgrey;
+  font-size: 12px;
+  font-weight: bold;
+
+  /* 内容水平垂直居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 白棋 */
+.white {
+  background-color: #fff;
+}
+
+/* 黑棋 */
+.black {
+  background-color: #000;
+}
+
+/* 获胜的棋子样式 */
+.win {
+  border: 1px solid red;
+  /* 阴影：x偏移量 | y偏移量 | 阴影模糊半径 | 阴影模糊颜色 */
+  box-shadow: 0 0 3px red;
+}
